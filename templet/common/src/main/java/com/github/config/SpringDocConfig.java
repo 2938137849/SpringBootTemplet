@@ -20,7 +20,6 @@ public class SpringDocConfig {
         return GroupedOpenApi.builder()
                 .group("用户模块")
                 .pathsToMatch("/**")
-                .packagesToScan("com.starhz.control.controller")
                 .build();
     }
 

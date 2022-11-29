@@ -1,6 +1,7 @@
 package com.github.config;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -21,6 +22,7 @@ public class RedisConfig {
     }
 
     @Bean
+    @ConditionalOnProperty(name = "spring.redis")
     public RedisTemplate<Object, Object> redisTemplate(RedisConnectionFactory factory, ObjectMapper mapper) {
         final var template = new RedisTemplate<>();
         template.setConnectionFactory(factory);

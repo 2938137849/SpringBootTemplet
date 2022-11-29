@@ -2,7 +2,6 @@ package com.github.config;
 
 import com.github.util.LocalDateTimeUtil;
 import org.jetbrains.annotations.NotNull;
-import org.springframework.boot.jackson.JsonComponent;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.stereotype.Component;
 
@@ -14,7 +13,7 @@ import java.time.LocalTime;
  * @author bin
  * @since 2022/11/07
  */
-@JsonComponent
+@Component
 public class ConverterConfig {
 
     @Component

@@ -4,6 +4,7 @@
 /.idea
 out
 gen
+/log
 
 ### Maven ###
 HELP.md
